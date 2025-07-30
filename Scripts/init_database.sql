@@ -4,19 +4,22 @@
 -- Author: Farhan Khan
 -- Date: 2025-07-29
 
--- 🛠️ Create the database (Run this from the "Databases" level, not inside another DB)
-CREATE DATABASE Data_warehouse;
--- =============================================
--- ⬇️ The following should be run inside data_warehouse database
--- =============================================
--- 🔁 Switch to the new database before running this (in pgAdmin: open new query in data_warehouse)
+-- ⚠️ WARNING: This will DROP the existing database if it exists!
+--      ➤ Make sure you are NOT connected to `data_warehouse`
+--      ➤ This script must be run from a higher-level database like `postgres`
+-- ============================================
 
+-- Step 1: Drop the database if it exists
+DROP DATABASE IF EXISTS data_warehouse;
 
--- 📂 Create Bronze Layer Schema (Raw Data)
+-- Step 2: Create a fresh database
+CREATE DATABASE data_warehouse;
+
+-- 🚨 STOP HERE and connect to the new `data_warehouse` DB before running the next part
+
+-- Step 3: After connecting to `data_warehouse`, run the following:
+
+-- Create schema layers
 CREATE SCHEMA bronze;
-
--- 📂 Create Silver Layer Schema (Cleaned Data)
 CREATE SCHEMA silver;
-
--- 📂 Create Gold Layer Schema (Aggregated/Final Data)
 CREATE SCHEMA gold;
