@@ -1,4 +1,3 @@
--- ============================================
 -- Script Name     : bronze_load_procedure.sql
 -- Purpose         : To create or replace the procedure `bronze.load_bronze`
 --                   which prepares the Bronze layer of the Data Warehouse
