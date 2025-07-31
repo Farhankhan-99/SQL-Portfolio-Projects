@@ -1,7 +1,10 @@
--- Script Name     : bronze_load_procedure.sql
+-- Script Name     : create_and_load_procedure.sql
 -- Purpose         : To create or replace the procedure `bronze.load_bronze`
 --                   which prepares the Bronze layer of the Data Warehouse
 --                   by creating necessary tables and performing bulk inserts
+-- Description     : 
+--                  1. Drops and recreates all Bronze tables
+--                  2. Loads data into the tables from CSV files
 -- 
 -- Layer           : Bronze (Raw data ingestion layer)
 -- Author          : Farhan Khan
